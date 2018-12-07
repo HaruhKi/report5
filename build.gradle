@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'report5'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 10
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+}
+
+jar {
+    manifest {
+        attributes  "Main-Class": "jp.ac.uryukyu.ie.e185706.Main"
+        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+    }
+}
